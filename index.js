@@ -867,51 +867,49 @@ function dbg(...args) {
 // === Body ===
 
 var ASM_CONSTS = {
-  478080: () => { if (document.fullscreenElement) return 1; },  
- 478126: () => { return Module.canvas.width; },  
- 478158: () => { return parseInt(Module.canvas.style.width); },  
- 478206: () => { document.exitFullscreen(); },  
- 478233: () => { setTimeout(function() { Module.requestFullscreen(false, false); }, 100); },  
- 478306: () => { if (document.fullscreenElement) return 1; },  
- 478352: () => { return Module.canvas.width; },  
- 478384: () => { return screen.width; },  
- 478409: () => { document.exitFullscreen(); },  
- 478436: () => { setTimeout(function() { Module.requestFullscreen(false, true); setTimeout(function() { canvas.style.width="unset"; }, 100); }, 100); },  
- 478569: () => { return window.innerWidth; },  
- 478595: () => { return window.innerHeight; },  
- 478622: () => { if (document.fullscreenElement) return 1; },  
- 478668: () => { return Module.canvas.width; },  
- 478700: () => { return parseInt(Module.canvas.style.width); },  
- 478748: () => { if (document.fullscreenElement) return 1; },  
- 478794: () => { return Module.canvas.width; },  
- 478826: () => { return screen.width; },  
- 478851: () => { return window.innerWidth; },  
- 478877: () => { return window.innerHeight; },  
- 478904: () => { if (document.fullscreenElement) return 1; },  
- 478950: () => { return Module.canvas.width; },  
- 478982: () => { return screen.width; },  
- 479007: () => { document.exitFullscreen(); },  
- 479034: () => { if (document.fullscreenElement) return 1; },  
- 479080: () => { return Module.canvas.width; },  
- 479112: () => { return parseInt(Module.canvas.style.width); },  
- 479160: () => { document.exitFullscreen(); },  
- 479187: ($0) => { Module.canvas.style.opacity = $0; },  
- 479225: () => { return screen.width; },  
- 479250: () => { return screen.height; },  
- 479276: () => { return window.screenX; },  
- 479303: () => { return window.screenY; },  
- 479330: () => { return window.devicePixelRatio; },  
- 479366: ($0) => { navigator.clipboard.writeText(UTF8ToString($0)); },  
- 479419: ($0) => { Module.canvas.style.cursor = UTF8ToString($0); },  
- 479470: () => { Module.canvas.style.cursor = 'none'; },  
- 479507: ($0, $1, $2, $3) => { try { navigator.getGamepads()[$0].vibrationActuator.playEffect('dual-rumble', { startDelay: 0, duration: $3, weakMagnitude: $1, strongMagnitude: $2 }); } catch (e) { try { navigator.getGamepads()[$0].hapticActuators[0].pulse($2, $3); } catch (e) { } } },  
- 479763: ($0) => { Module.canvas.style.cursor = UTF8ToString($0); },  
- 479814: () => { if (document.fullscreenElement) return 1; },  
- 479860: () => { return window.innerWidth; },  
- 479886: () => { return window.innerHeight; },  
- 479913: () => { if (document.pointerLockElement) return 1; }
+  477184: () => { if (document.fullscreenElement) return 1; },  
+ 477230: () => { return document.getElementById('canvas').width; },  
+ 477282: () => { return parseInt(document.getElementById('canvas').style.width); },  
+ 477350: () => { document.exitFullscreen(); },  
+ 477377: () => { setTimeout(function() { Module.requestFullscreen(false, false); }, 100); },  
+ 477450: () => { if (document.fullscreenElement) return 1; },  
+ 477496: () => { return document.getElementById('canvas').width; },  
+ 477548: () => { return screen.width; },  
+ 477573: () => { document.exitFullscreen(); },  
+ 477600: () => { setTimeout(function() { Module.requestFullscreen(false, true); setTimeout(function() { canvas.style.width="unset"; }, 100); }, 100); },  
+ 477733: () => { return window.innerWidth; },  
+ 477759: () => { return window.innerHeight; },  
+ 477786: () => { if (document.fullscreenElement) return 1; },  
+ 477832: () => { return document.getElementById('canvas').width; },  
+ 477884: () => { return parseInt(document.getElementById('canvas').style.width); },  
+ 477952: () => { if (document.fullscreenElement) return 1; },  
+ 477998: () => { return document.getElementById('canvas').width; },  
+ 478050: () => { return screen.width; },  
+ 478075: () => { return window.innerWidth; },  
+ 478101: () => { return window.innerHeight; },  
+ 478128: () => { if (document.fullscreenElement) return 1; },  
+ 478174: () => { return document.getElementById('canvas').width; },  
+ 478226: () => { return screen.width; },  
+ 478251: () => { document.exitFullscreen(); },  
+ 478278: () => { if (document.fullscreenElement) return 1; },  
+ 478324: () => { return document.getElementById('canvas').width; },  
+ 478376: () => { return parseInt(document.getElementById('canvas').style.width); },  
+ 478444: () => { document.exitFullscreen(); },  
+ 478471: ($0) => { document.getElementById('canvas').style.opacity = $0; },  
+ 478529: () => { return screen.width; },  
+ 478554: () => { return screen.height; },  
+ 478580: () => { return window.screenX; },  
+ 478607: () => { return window.screenY; },  
+ 478634: ($0) => { navigator.clipboard.writeText(UTF8ToString($0)); },  
+ 478687: ($0) => { document.getElementById("canvas").style.cursor = UTF8ToString($0); },  
+ 478758: () => { document.getElementById('canvas').style.cursor = 'none'; },  
+ 478815: ($0, $1, $2, $3) => { try { navigator.getGamepads()[$0].vibrationActuator.playEffect('dual-rumble', { startDelay: 0, duration: $3, weakMagnitude: $1, strongMagnitude: $2 }); } catch (e) { try { navigator.getGamepads()[$0].hapticActuators[0].pulse($2, $3); } catch (e) { } } },  
+ 479071: ($0) => { document.getElementById('canvas').style.cursor = UTF8ToString($0); },  
+ 479142: () => { if (document.fullscreenElement) return 1; },  
+ 479188: () => { return window.innerWidth; },  
+ 479214: () => { return window.innerHeight; },  
+ 479241: () => { if (document.pointerLockElement) return 1; }
 };
-function GetCanvasIdJs() { var canvasId = "#" + Module.canvas.id; var lengthBytes = lengthBytesUTF8(canvasId) + 1; var stringOnWasmHeap = _malloc(lengthBytes); stringToUTF8(canvasId, stringOnWasmHeap, lengthBytes); return stringOnWasmHeap; }
 
 // end include: preamble.js
 
@@ -1735,6 +1733,13 @@ function GetCanvasIdJs() { var canvasId = "#" + Module.canvas.id; var lengthByte
   write(stream, buffer, offset, length, position, canOwn) {
           // The data buffer should be a typed array view
           assert(!(buffer instanceof ArrayBuffer));
+          // If the buffer is located in main memory (HEAP), and if
+          // memory can grow, we can't hold on to references of the
+          // memory buffer, as they may get invalidated. That means we
+          // need to do copy its contents.
+          if (buffer.buffer === HEAP8.buffer) {
+            canOwn = false;
+          }
   
           if (!length) return 0;
           var node = stream.node;
@@ -4031,10 +4036,6 @@ function GetCanvasIdJs() { var canvasId = "#" + Module.canvas.id; var lengthByte
       assert(ASM_CONSTS.hasOwnProperty(code), `No EM_ASM constant found at address ${code}.  The loaded WebAssembly file is likely out of sync with the generated JavaScript.`);
       return ASM_CONSTS[code](...args);
     };
-  var _emscripten_asm_const_double = (code, sigPtr, argbuf) => {
-      return runEmAsmFunction(code, sigPtr, argbuf);
-    };
-
   var _emscripten_asm_const_int = (code, sigPtr, argbuf) => {
       return runEmAsmFunction(code, sigPtr, argbuf);
     };
@@ -6405,17 +6406,78 @@ function GetCanvasIdJs() { var canvasId = "#" + Module.canvas.id; var lengthByte
   var _emscripten_glViewport = _glViewport;
 
   var getHeapMax = () =>
-      HEAPU8.length;
+      // Stay one Wasm page short of 4GB: while e.g. Chrome is able to allocate
+      // full 4GB Wasm memories, the size will wrap back to 0 bytes in Wasm side
+      // for any code that deals with heap sizes, which would require special
+      // casing all heap size related code to treat 0 specially.
+      2147483648;
   
   
-  var abortOnCannotGrowMemory = (requestedSize) => {
-      abort(`Cannot enlarge memory arrays to size ${requestedSize} bytes (OOM). Either (1) compile with -sINITIAL_MEMORY=X with X higher than the current value ${HEAP8.length}, (2) compile with -sALLOW_MEMORY_GROWTH which allows increasing the size at runtime, or (3) if you want malloc to return NULL (0) instead of this abort, compile with -sABORTING_MALLOC=0`);
+  var growMemory = (size) => {
+      var b = wasmMemory.buffer;
+      var pages = ((size - b.byteLength + 65535) / 65536) | 0;
+      try {
+        // round size grow request up to wasm page size (fixed 64KB per spec)
+        wasmMemory.grow(pages); // .grow() takes a delta compared to the previous size
+        updateMemoryViews();
+        return 1 /*success*/;
+      } catch(e) {
+        err(`growMemory: Attempted to grow heap from ${b.byteLength} bytes to ${size} bytes, but got error: ${e}`);
+      }
+      // implicit 0 return to save code size (caller will cast "undefined" into 0
+      // anyhow)
     };
   var _emscripten_resize_heap = (requestedSize) => {
       var oldSize = HEAPU8.length;
       // With CAN_ADDRESS_2GB or MEMORY64, pointers are already unsigned.
       requestedSize >>>= 0;
-      abortOnCannotGrowMemory(requestedSize);
+      // With multithreaded builds, races can happen (another thread might increase the size
+      // in between), so return a failure, and let the caller retry.
+      assert(requestedSize > oldSize);
+  
+      // Memory resize rules:
+      // 1.  Always increase heap size to at least the requested size, rounded up
+      //     to next page multiple.
+      // 2a. If MEMORY_GROWTH_LINEAR_STEP == -1, excessively resize the heap
+      //     geometrically: increase the heap size according to
+      //     MEMORY_GROWTH_GEOMETRIC_STEP factor (default +20%), At most
+      //     overreserve by MEMORY_GROWTH_GEOMETRIC_CAP bytes (default 96MB).
+      // 2b. If MEMORY_GROWTH_LINEAR_STEP != -1, excessively resize the heap
+      //     linearly: increase the heap size by at least
+      //     MEMORY_GROWTH_LINEAR_STEP bytes.
+      // 3.  Max size for the heap is capped at 2048MB-WASM_PAGE_SIZE, or by
+      //     MAXIMUM_MEMORY, or by ASAN limit, depending on which is smallest
+      // 4.  If we were unable to allocate as much memory, it may be due to
+      //     over-eager decision to excessively reserve due to (3) above.
+      //     Hence if an allocation fails, cut down on the amount of excess
+      //     growth, in an attempt to succeed to perform a smaller allocation.
+  
+      // A limit is set for how much we can grow. We should not exceed that
+      // (the wasm binary specifies it, so if we tried, we'd fail anyhow).
+      var maxHeapSize = getHeapMax();
+      if (requestedSize > maxHeapSize) {
+        err(`Cannot enlarge memory, requested ${requestedSize} bytes, but the limit is ${maxHeapSize} bytes!`);
+        return false;
+      }
+  
+      // Loop through potential heap size increases. If we attempt a too eager
+      // reservation that fails, cut down on the attempted size and reserve a
+      // smaller bump instead. (max 3 times, chosen somewhat arbitrarily)
+      for (var cutDown = 1; cutDown <= 4; cutDown *= 2) {
+        var overGrownHeapSize = oldSize * (1 + 0.2 / cutDown); // ensure geometric growth
+        // but limit overreserving (default to capping at +96MB overgrowth at most)
+        overGrownHeapSize = Math.min(overGrownHeapSize, requestedSize + 100663296 );
+  
+        var newSize = Math.min(maxHeapSize, alignMemory(Math.max(requestedSize, overGrownHeapSize), 65536));
+  
+        var replacement = growMemory(newSize);
+        if (replacement) {
+  
+          return true;
+        }
+      }
+      err(`Failed to grow the heap from ${oldSize} bytes to ${newSize} bytes, not enough memory!`);
+      return false;
     };
 
   var _emscripten_run_script = (ptr) => {
@@ -6433,51 +6495,6 @@ function GetCanvasIdJs() { var canvasId = "#" + Module.canvas.id; var lengthByte
       }
       return -1;
     };
-
-  
-  
-  
-  
-  var wasmTableMirror = [];
-  
-  /** @type {WebAssembly.Table} */
-  var wasmTable;
-  var getWasmTableEntry = (funcPtr) => {
-      var func = wasmTableMirror[funcPtr];
-      if (!func) {
-        if (funcPtr >= wasmTableMirror.length) wasmTableMirror.length = funcPtr + 1;
-        /** @suppress {checkTypes} */
-        wasmTableMirror[funcPtr] = func = wasmTable.get(funcPtr);
-      }
-      /** @suppress {checkTypes} */
-      assert(wasmTable.get(funcPtr) == func, 'JavaScript-side Wasm function table mirror is out of date!');
-      return func;
-    };
-  var registerFocusEventCallback = (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) => {
-      JSEvents.focusEvent ||= _malloc(256);
-  
-      var focusEventHandlerFunc = (e = event) => {
-        var nodeName = JSEvents.getNodeNameForTarget(e.target);
-        var id = e.target.id ? e.target.id : '';
-  
-        var focusEvent = JSEvents.focusEvent;
-        stringToUTF8(nodeName, focusEvent + 0, 128);
-        stringToUTF8(id, focusEvent + 128, 128);
-  
-        if (getWasmTableEntry(callbackfunc)(eventTypeId, focusEvent, userData)) e.preventDefault();
-      };
-  
-      var eventHandler = {
-        target: findEventTarget(target),
-        eventTypeString,
-        callbackfunc,
-        handlerFunc: focusEventHandlerFunc,
-        useCapture
-      };
-      return JSEvents.registerOrRemoveHandler(eventHandler);
-    };
-  var _emscripten_set_blur_callback_on_thread = (target, userData, useCapture, callbackfunc, targetThread) =>
-      registerFocusEventCallback(target, userData, useCapture, callbackfunc, 12, "blur", targetThread);
 
   
   var findCanvasEventTarget = findEventTarget;
@@ -6522,6 +6539,21 @@ function GetCanvasIdJs() { var canvasId = "#" + Module.canvas.id; var lengthByte
   
   
   
+  var wasmTableMirror = [];
+  
+  /** @type {WebAssembly.Table} */
+  var wasmTable;
+  var getWasmTableEntry = (funcPtr) => {
+      var func = wasmTableMirror[funcPtr];
+      if (!func) {
+        if (funcPtr >= wasmTableMirror.length) wasmTableMirror.length = funcPtr + 1;
+        /** @suppress {checkTypes} */
+        wasmTableMirror[funcPtr] = func = wasmTable.get(funcPtr);
+      }
+      /** @suppress {checkTypes} */
+      assert(wasmTable.get(funcPtr) == func, 'JavaScript-side Wasm function table mirror is out of date!');
+      return func;
+    };
   var registerMouseEventCallback = (target, userData, useCapture, callbackfunc, eventTypeId, eventTypeString, targetThread) => {
       JSEvents.mouseEvent ||= _malloc(64);
       target = findEventTarget(target);
@@ -6545,9 +6577,6 @@ function GetCanvasIdJs() { var canvasId = "#" + Module.canvas.id; var lengthByte
     };
   var _emscripten_set_click_callback_on_thread = (target, userData, useCapture, callbackfunc, targetThread) =>
       registerMouseEventCallback(target, userData, useCapture, callbackfunc, 4, "click", targetThread);
-
-  var _emscripten_set_focus_callback_on_thread = (target, userData, useCapture, callbackfunc, targetThread) =>
-      registerFocusEventCallback(target, userData, useCapture, callbackfunc, 13, "focus", targetThread);
 
   
   
@@ -9126,11 +9155,25 @@ function GetCanvasIdJs() { var canvasId = "#" + Module.canvas.id; var lengthByte
     };
 
   /** @type {function(...*):?} */
+  function _init_event_raw(
+  ) {
+  abort('missing function: init_event_raw');
+  }
+  _init_event_raw.stub = true;
+
+  /** @type {function(...*):?} */
   function _ln(
   ) {
   abort('missing function: ln');
   }
   _ln.stub = true;
+
+  /** @type {function(...*):?} */
+  function _openFileDialog(
+  ) {
+  abort('missing function: openFileDialog');
+  }
+  _openFileDialog.stub = true;
 
   /** @type {function(...*):?} */
   function _sin(
@@ -9179,8 +9222,6 @@ function checkIncomingModuleAPI() {
 }
 var wasmImports = {
   /** @export */
-  GetCanvasIdJs,
-  /** @export */
   __assert_fail: ___assert_fail,
   /** @export */
   __syscall_faccessat: ___syscall_faccessat,
@@ -9196,8 +9237,6 @@ var wasmImports = {
   clock_time_get: _clock_time_get,
   /** @export */
   cos: _cos,
-  /** @export */
-  emscripten_asm_const_double: _emscripten_asm_const_double,
   /** @export */
   emscripten_asm_const_int: _emscripten_asm_const_int,
   /** @export */
@@ -9545,13 +9584,9 @@ var wasmImports = {
   /** @export */
   emscripten_sample_gamepad_data: _emscripten_sample_gamepad_data,
   /** @export */
-  emscripten_set_blur_callback_on_thread: _emscripten_set_blur_callback_on_thread,
-  /** @export */
   emscripten_set_canvas_element_size: _emscripten_set_canvas_element_size,
   /** @export */
   emscripten_set_click_callback_on_thread: _emscripten_set_click_callback_on_thread,
-  /** @export */
-  emscripten_set_focus_callback_on_thread: _emscripten_set_focus_callback_on_thread,
   /** @export */
   emscripten_set_fullscreenchange_callback_on_thread: _emscripten_set_fullscreenchange_callback_on_thread,
   /** @export */
@@ -9747,7 +9782,11 @@ var wasmImports = {
   /** @export */
   glfwWindowHint: _glfwWindowHint,
   /** @export */
+  init_event_raw: _init_event_raw,
+  /** @export */
   ln: _ln,
+  /** @export */
+  openFileDialog: _openFileDialog,
   /** @export */
   sin: _sin,
   /** @export */
@@ -9763,7 +9802,9 @@ var __start = Module['__start'] = createExportWrapper('_start', 0);
 var _main_end = Module['_main_end'] = createExportWrapper('main_end', 0);
 var _web_window_size_changed = Module['_web_window_size_changed'] = createExportWrapper('web_window_size_changed', 2);
 var __end = Module['__end'] = createExportWrapper('_end', 0);
+var _track_load_callback = Module['_track_load_callback'] = createExportWrapper('track_load_callback', 2);
 var _fetch_callback = Module['_fetch_callback'] = createExportWrapper('fetch_callback', 5);
+var _odin_dom_do_event_callback = Module['_odin_dom_do_event_callback'] = createExportWrapper('odin_dom_do_event_callback', 3);
 var _malloc = createExportWrapper('malloc', 1);
 var _free = createExportWrapper('free', 1);
 var _fflush = createExportWrapper('fflush', 1);
@@ -9791,7 +9832,6 @@ var missingLibrarySymbols = [
   'stackAlloc',
   'getTempRet0',
   'setTempRet0',
-  'growMemory',
   'inetPton4',
   'inetNtop4',
   'inetPton6',
@@ -9844,6 +9884,7 @@ var missingLibrarySymbols = [
   'writeArrayToMemory',
   'registerKeyEventCallback',
   'registerWheelEventCallback',
+  'registerFocusEventCallback',
   'fillDeviceOrientationEventData',
   'registerDeviceOrientationEventCallback',
   'fillDeviceMotionEventData',
@@ -9940,7 +9981,7 @@ var unexportedSymbols = [
   'zeroMemory',
   'exitJS',
   'getHeapMax',
-  'abortOnCannotGrowMemory',
+  'growMemory',
   'ENV',
   'ERRNO_CODES',
   'strError',
@@ -9987,7 +10028,6 @@ var unexportedSymbols = [
   'fillMouseEventData',
   'registerMouseEventCallback',
   'registerUiEventCallback',
-  'registerFocusEventCallback',
   'fillFullscreenChangeEventData',
   'registerFullscreenChangeEventCallback',
   'currentFullscreenStrategy',
